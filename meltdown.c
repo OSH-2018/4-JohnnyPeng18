@@ -21,13 +21,14 @@ extern char stopspeculate[];
 static int hit_limit;
 static int hist[256];
 
+
 void sigsegv(int sig, siginfo_t *siginfo, void *context)
 {
 	ucontext_t *ucontext = context;
 	ucontext->uc_mcontext.gregs[REG_RIP] = (unsigned long)stopspeculate;
 }
 
-int set_signal(void)
+int set_signal()
 {
 	struct sigaction act = {
 		.sa_sigaction = sigsegv,
