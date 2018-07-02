@@ -12,11 +12,15 @@
 
 **关闭后，再次检测meltdown漏洞如下图所示：**
 
-![3](/Users/py/Desktop/学习/大二下/OS/Lab/4/3.png)
+![image](https://github.com/OSH-2018/4-JohnnyPeng18/blob/master/3.png)
 
 **2、为了更加方便的读取物理内存空间，应该将kaslr也关闭**
 
 **关闭pti和kaslr的方法是在/boot/grub/grub.cfg中找到linux /boot/vmlinuz-4.13.0-45-generic.efi.signed root=UUID=.....   后面加上nopti 和 nokaslr**
+
+**如图所示：**
+
+![image](https://github.com/OSH-2018/4-JohnnyPeng18/blob/master/4.png)
 
 ### 实验前测试
 
@@ -24,7 +28,7 @@
 
 **检测结果如图所示：**
 
-![2](/Users/py/Desktop/学习/大二下/OS/Lab/4/2.png)
+![image](https://github.com/OSH-2018/4-JohnnyPeng18/blob/master/2.png)
 
 **由图可以看出攻击的成功率约为60%。**
 
@@ -48,7 +52,7 @@
 
 ###实验结果
 
-![1](/Users/py/Desktop/学习/大二下/OS/Lab/4/1.png)
+![image](https://github.com/OSH-2018/4-JohnnyPeng18/blob/master/1.png)
 
 **从图中可以看出，攻击程序成功从内核空间0xffffffffc0790000中获取了private_key：0x2333233323332333。**
 
